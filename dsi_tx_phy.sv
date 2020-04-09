@@ -9,11 +9,11 @@
 //payload CRC is calculated
 module dsi_tx_phy (
 	input         byteclk   , // test 25MHz
-	input         bitclk    , // test 100MHz
+	//input         bitclk    , // test 100MHz
 	input         rstn      , // Asynchronous reset active low
 	input         FS        , // start transmit a frame
-	input  [15:0] fno       ,
-	input  [ 7:0] lnum      , //transmit line number each frame
+	//input  [15:0] fno       ,
+	//input  [ 7:0] lnum      , //transmit line number each frame
 	input  [31:0] data      ,
 	input  [31:0] CRC       ,
 	output        hs_clk_o  , //diff pair P
