@@ -53,7 +53,7 @@ module dsi_tx_phy (
 	);
 	reg [7:0] acnt;
 	always@(posedge coreclk)
-		if(areset || !rstn) begin
+		if(!rstn) begin
 			acnt   <= 8'd0;
 			areset <= 1'b1;
 		end else begin
