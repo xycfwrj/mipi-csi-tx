@@ -74,7 +74,6 @@ module dsi_tx_phy (
 	reg payload;
 	always@(posedge coreclk)
 		if(areset || !rstn) begin
-			dphy_st <= INIT;
 			FSr     <= 1'b0;
 			FSrr    <= 1'b0;
 		end else begin
