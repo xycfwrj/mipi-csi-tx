@@ -51,9 +51,9 @@ module mipi_blvds (
 
         assign FS = ~user_pb[3];
 
-
+        //50mhz in, 12.5mhz ,50mhz,50mhz 90degree
         pllm pllm_inst (clk50m_max10,byteclk,bitclk,bitclk90,locked);
-
+        //gpio lite: pseudo diff, oe, ddr,
         oddr dphy_hstl (bitclk,data2b,mipi_tx_data_0_hs_p,mipi_tx_data_0_hs_n,hsoe);
         oddr dphy_hstl_c (bitclk90,2'b10,mipi_tx_clk_hs_p,mipi_tx_clk_hs_n,hsoe);
 
